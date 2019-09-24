@@ -10,6 +10,7 @@ namespace xxxx.bl
     {
         static void Main(string[] args)
         {
+            jkhjjuj
         }
     }
 }

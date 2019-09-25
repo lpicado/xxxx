@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PIndividualPruebaConsola;
 
-namespace xxxx.bl
+namespace PIndividualPruebaConsola
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            
         }
     }
 }

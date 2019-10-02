@@ -68,6 +68,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Aeropuerto.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Aeropuerto2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aeropuerto2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Aeropuerto2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aeropuerto2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Aeropuerto2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aeropuerto2.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Aviones.cs">
       <DependentUpon>Aeropuerto.tt</DependentUpon>
     </Compile>
@@ -95,6 +110,13 @@
     <None Include="Aeropuerto.edmx.diagram">
       <DependentUpon>Aeropuerto.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Aeropuerto2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Aeropuerto2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Aeropuerto2.edmx.diagram">
+      <DependentUpon>Aeropuerto2.edmx</DependentUpon>
+    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -109,15 +131,19 @@
       <DependentUpon>Aeropuerto.edmx</DependentUpon>
       <LastGenOutput>Aeropuerto.cs</LastGenOutput>
     </Content>
+    <Content Include="Aeropuerto2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Aeropuerto2.edmx</DependentUpon>
+      <LastGenOutput>Aeropuerto2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Aeropuerto2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Aeropuerto2.edmx</DependentUpon>
+      <LastGenOutput>Aeropuerto2.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\xxxx.bl\PIndividual.bl.csproj">
-      <Project>{6cf291ea-369b-4034-88c1-c940b791ed1a}</Project>
-      <Name>PIndividual.bl</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

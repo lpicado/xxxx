@@ -10,7 +10,8 @@ namespace xxxx.bl
     {
         static void Main(string[] args)
         {
-            
+            Prueba n = new Prueba();
+            n.PruebaSelect();
         }
     }
 }

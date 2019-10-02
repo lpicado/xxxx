@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="AeropuertoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AeropuertoModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Aviones">
           <Key>
             <PropertyRef Name="Id" />
@@ -58,7 +58,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AeropuertoModelStoreContainer">
+        <EntityContainer Name="AeropuertoModel1StoreContainer">
           <EntitySet Name="Aviones" EntityType="Self.Aviones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Paises/Destino/Aeropuerto" EntityType="Self.Paises/Destino/Aeropuerto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pasajeros" EntityType="Self.Pasajeros" Schema="dbo" store:Type="Tables" />
@@ -71,7 +71,7 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="AeropuertoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="AeropuertoModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Aviones">
           <Key>
             <PropertyRef Name="Id" />
@@ -127,7 +127,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AeropuertoEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AeropuertoEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Aviones" EntityType="Self.Aviones" />
           <EntitySet Name="Paises_Destino_Aeropuerto" EntityType="Self.Paises_Destino_Aeropuerto" />
           <EntitySet Name="Pasajeros" EntityType="Self.Pasajeros" />
@@ -142,9 +142,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AeropuertoModelStoreContainer" CdmEntityContainer="AeropuertoEntities">
+        <EntityContainerMapping StorageEntityContainer="AeropuertoModel1StoreContainer" CdmEntityContainer="AeropuertoEntities1">
           <EntitySetMapping Name="Aviones">
-            <EntityTypeMapping TypeName="AeropuertoModel.Aviones">
+            <EntityTypeMapping TypeName="AeropuertoModel1.Aviones">
               <MappingFragment StoreEntitySet="Aviones">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Modelo" ColumnName="Modelo" />
@@ -154,7 +154,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Paises_Destino_Aeropuerto">
-            <EntityTypeMapping TypeName="AeropuertoModel.Paises_Destino_Aeropuerto">
+            <EntityTypeMapping TypeName="AeropuertoModel1.Paises_Destino_Aeropuerto">
               <MappingFragment StoreEntitySet="Paises/Destino/Aeropuerto">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="id_vuelo" ColumnName="id_vuelo" />
@@ -166,7 +166,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pasajeros">
-            <EntityTypeMapping TypeName="AeropuertoModel.Pasajeros">
+            <EntityTypeMapping TypeName="AeropuertoModel1.Pasajeros">
               <MappingFragment StoreEntitySet="Pasajeros">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Id_vuelo" ColumnName="Id_vuelo" />
@@ -178,7 +178,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Vuelos">
-            <EntityTypeMapping TypeName="AeropuertoModel.Vuelos">
+            <EntityTypeMapping TypeName="AeropuertoModel1.Vuelos">
               <MappingFragment StoreEntitySet="Vuelos">
                 <ScalarProperty Name="Id_vuelo" ColumnName="Id_vuelo" />
                 <ScalarProperty Name="Escala" ColumnName="Escala" />
